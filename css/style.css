@@ -1,0 +1,179 @@
+/* Allgemeine Stilvorgaben */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: 'Comic Neue', cursive;
+  background-image: url('/images/startbild.png');
+  background-size: cover; /* passt das Bild auf die Größe des Elements an */
+  background-repeat: no-repeat; /* verhindert die Wiederholung des Bildes */
+}
+
+* {
+  cursor: url('/media/Brush\ Normal\ Select.cur'),auto;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Comic Neue', cursive;
+  flex: auto;
+}
+
+.header-content {
+  display: flex;
+  align-items:left;
+  position:fixed;
+}
+
+
+#logo {
+  border: none; /* Entferne eventuellen Rahmen */
+  background: none; /* Entferne den Hintergrund, falls nötig */
+}
+
+#logo img {
+  width: 250px; /* Passe die Breite nach Bedarf an */
+  height: auto; /* Damit das Seitenverhältnis erhalten bleibt */
+}
+
+.characterimage {
+  max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 100px;
+  background-color: #d7ebbb90;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  margin-top: 50px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Stil für spezifische Elemente auf den Unterseiten */
+
+h1 {
+  font-size: 28px;
+  font-family: 'Comic Neue', cursive;
+}
+
+
+h2 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 28px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 700px; /* Breite des Containers, anpassen nach Bedarf */
+  height: 700px; /* Höhe des Containers, anpassen nach Bedarf */
+  margin-left: 500px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomable-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.5); /* Hier wird das Bild um 20% vergrößert. Du kannst diesen Wert anpassen. */
+}
+
+#container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.notification {
+  font-size: large;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Hintergrundfarbe */
+  color: #fff; /* Textfarbe */
+  padding: 15px;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
