@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Dungeon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+    <body>
+      <header>
+              <div id="logo" onclick="window.location.href='index.html'">
+                <img src="images/logo3.png" alt="Dein Logo">
+              </div>
+          <nav>
+                  <div>
+                    <h2>Secret Dungeon</h2>
+                  </div>
+              <div id="liste">
+                <ul>
+                  <li><a href="index.html">Der Pfad des Lichts</a></li>
+                  <li><a href="behindthescenes.html">Behind the Scenes</a></li>
+                  <li><a href="charaktere.html">Charakter Profile</a></li>
+                  <li><a href="karte.html">Karte</a></li>
+                  <li><a href="rätsel.html">Secret Dungeon</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+              </div>
+          </nav>
+          <div id="burger-icon">
+                <div id="burger-menu">
+                    <ul>
+                      <li><a href="index.html">Der Pfad des Lichts</a></li>
+                      <li><a href="behindthescenes.html">Behind the Scenes</a></li>
+                      <li><a href="charaktere.html">Charakter Profile</a></li>
+                      <li><a href="karte.html">Karte</a></li>
+                      <li><a href="rätsel.html">Secret Dungeon</a></li>
+                      <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+      </header>
+                <main>
+                    <div id="container">
+                      <h2>Willkommen!</h2>
+                              <p> Löse folgendes Rätsel und erlange Zugang zum Secret Dungeon!
+                                <br><br>
+                                "In der Morgendämmerung bin ich gross und stark,<br>
+                                In der Mittagssonne schmelze ich dahin wie Wachs.<br>
+                                Doch in der Nacht, so dunkel und kalt,<br>
+                                Bin ich unsichtbar, versteckt im Wald.<br><br><br>
+                                Was bin ich?" <br><br>
+                                Schreibe das Lösungswort mit nur Kleinbuchstaben um Zutritt zu erlangen.<br>
+                            </p>
+                          <input type="text" id="lösungswort" placeholder="Gib das Lösungswort ein">
+                              <button 
+                                  onclick="überprüfeLösung()">Eintritt gewähren
+                              </button>
+                          <p id="nachricht"></p>
+                    </div>
+                </main>
+            <footer>
+              <p>&copy; Milena Gähwiler 2023. Privacy Policy </p>    
+           </footer>
+    </body>
+</html>

@@ -1,37 +1,74 @@
 /* Allgemeine Stilvorgaben */
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px;
   background-color: #f0f0f0;
   font-family: 'Comic Neue', cursive;
   background-image: url('/images/startbild.png');
   background-size: cover; /* passt das Bild auf die Größe des Elements an */
   background-repeat: no-repeat; /* verhindert die Wiederholung des Bildes */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentrieren der Elemente horizontal */
+  justify-content: center;    min-height: 100vh; /* Mindesthöhe des gesamten Bildschirms, um die vertikale Mitte zu ermöglichen */
+  min-height: 100vh; /* Mindesthöhe des gesamten Bildschirms, um die vertikale Mitte zu ermöglichen */
 }
-
+  
 * {
   cursor: url('/media/Brush\ Normal\ Select.cur'),auto;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 100px;
+  background-color: #d7ebbb90;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0px;
 }
 
 header {
   background-color: #ffffff;
   color: #000000;
-  text-align: center;
   padding: 10px;
-  font-family: 'Comic Neue', cursive;
-  flex: auto;
-}
-
-.header-content {
   display: flex;
-  align-items:left;
-  position:fixed;
+  align-items: center; /* Zentrieren der Elemente vertikal */
+  justify-content: space-between; /* Abstand zwischen den Elementen */
+  width: 100%; /* Header auf 100% Breite setzen */
+  position: fixed; /* Header wird fixiert */
+  top: 0; /* Oberkante des Viewports */
+  z-index: 1000;
+  height: 125px;
 }
 
+nav {
+  display: flex;
+  flex-direction: column; /* Elemente werden untereinander angeordnet */
+  align-items: center; /* Zentrieren der Elemente horizontal */
+  flex: 1; /* Füllt den verbleibenden verfügbaren Platz aus */
+}
 
+header h2 {
+  margin: 0; /* Entfernen des Standardabstands für h2 */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  margin-top: 50px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* LOGO */
 #logo {
   border: none; /* Entferne eventuellen Rahmen */
   background: none; /* Entferne den Hintergrund, falls nötig */
+  position: absolute;
+  cursor: pointer;
 }
 
 #logo img {
@@ -45,40 +82,36 @@ header {
     margin: 0 auto;
 }
 
+.poster{
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*Navigationsleiste */
+
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
-}
+  margin: 15px;}
 
 nav ul li a {
   text-decoration: none;
   color: #000000;
+  margin: 5px;
 }
 
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 100px;
-  background-color: #d7ebbb90;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  margin-top: 50px;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
 
 /* Stil für spezifische Elemente auf den Unterseiten */
 
@@ -94,8 +127,53 @@ h2 {
   text-align: center;
 }
 
-body {
-  font-family: Arial, sans-serif;
+
+/* Karte */ 
+.image-container {
+  position: relative;
+  overflow: hidden;
+  max-width: auto; /* Breite des Containers, anpassen nach Bedarf */
+  max-height: auto; /* Höhe des Containers, anpassen nach Bedarf */
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Zoomable Image */
+.zoomable-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.5); /* Hier wird das Bild um 20% vergrößert. Du kannst diesen Wert anpassen. */
+}
+
+/* Secret Dungeon */
+#container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Kontaktformular */
+.notification {
+  font-size: large;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50; /* Hintergrundfarbe */
+  color: #fff; /* Textfarbe */
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
 }
 
 .container {
@@ -117,63 +195,151 @@ input, textarea {
   padding: 8px;
 }
 
-button {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-  width: 700px; /* Breite des Containers, anpassen nach Bedarf */
-  height: 700px; /* Höhe des Containers, anpassen nach Bedarf */
-  margin-left: 500px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.zoomable-image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.zoomable-image:hover {
-  transform: scale(1.5); /* Hier wird das Bild um 20% vergrößert. Du kannst diesen Wert anpassen. */
-}
-
-#container {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 input {
   padding: 8px;
   font-size: 14px;
 }
 
-.notification {
-  font-size: large;
+#header-narrow {
+  display: none;
+}
+
+#burger-icon {
+  display: none; /* Standardmäßig das Burger-Icon ausblenden */
+}
+
+#burger-menu {
+  text-decoration: none;
+  flex-direction: column;
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4CAF50; /* Hintergrundfarbe */
-  color: #fff; /* Textfarbe */
-  padding: 15px;
-  z-index: 1000;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
+  left: 0;
+  font-family: 'Comic Neue', bold;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff00;
+}
+
+#burger-menu a {
+  text-decoration: none; /* Entfernt Unterstriche von Verlinkungen */
+  color: rgb(0, 0, 0);
+}
+
+#burger-menu ul {
+  list-style: none; /* Entfernt Aufzählungspunkte von Listen */
+  padding: 0; /* Entfernt den Standard-Innenabstand für Listen */
+  margin: 0; /* Entfernt den Standard-Außenabstand für Listen */
+}
+
+#burger-menu ul li {
+  margin: 15px;
+}
+
+#burger-menu ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+}
+
+/* Media Query für Mobilgeräte */
+
+@media screen and (max-width: 1200px) {
+  #logo,
+  #liste {
+    display: none;
+  }
+
+  #burger-icon,
+  #burger-menu {
+    display: block;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #liste {
+    display: none;
+  }
+
+  #burger-icon {
+    display: block;
+    /* Das Burger-Icon anzeigen */
+    text-decoration: none;
+    font-size: 50%;
+  }
+
+  #burger-menu {
+    display: flex;
+    /* Das Burger-Menu anzeigen */
+    text-decoration: none;
+  }
+
+  header {
+    height: 5%; /* Beispielhafte Anpassung der Header-Höhe für Mobilgeräte */
+    font-size:large;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10%; /* Beispielhafte Anpassung des Abstands zwischen den Navigationspunkten für Mobilgeräte */
+  }
+
+  h1 {
+    font-size: 150%; /* Beispielhafte Anpassung der Schriftgröße für Mobilgeräte */
+  }
+
+  h2 {
+    font-size: 200%; /* Beispielhafte Anpassung der Schriftgröße für Mobilgeräte */
+  }
+
+  .characterimage {
+    max-width: 100%; /* Beispielhafte Anpassung der Bildbreite für Mobilgeräte */
+  }
+
+  .poster {
+    max-width: 100%;
+    height: auto; /* Beispielhafte Anpassung der Bildgröße für Mobilgeräte */
+  }
+
+  button {
+    font-size: 15%; /* Beispielhafte Anpassung der Schriftgröße für Mobilgeräte */
+  }
+
+  #burger-menu ul li {
+    margin: 10%; /* Beispielhafte Anpassung des Abstands zwischen den Burger-Menu-Punkten für Mobilgeräte */
+    font-size:200%;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    font-size: 16px; /* Schriftgröße für das gesamte Formular */
+  }
+  
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 40%; /* Schriftgröße für Eingabefelder und Textarea */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 30px; /* Schriftgröße für den Absende-Button */
+  cursor: pointer;  
+}
+
+.image-container {
+  max-width: auto; /* Breite des Containers, anpassen nach Bedarf */
+  padding: 0px;
+}
 }
