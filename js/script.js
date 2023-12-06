@@ -36,3 +36,4 @@ function überprüfeLösung() {
     nachrichtElement.textContent = 'Falsch! Bitte versuche es erneut.';
   }
 }
+
