@@ -26,14 +26,3 @@ Auch die Illustration auf meinem wissenschaftlichen Poster habe ich so erstellt.
 Code:
 
 Zu Beginn übernahm ich eine Grundstruktur eines vorherigen IM Projekts. Dadurch hatte ich ein bereits verknüpftes CSS und Javascript. Danach erstellte ich all meine Unterseiten und verknüpfte diese alle durch den header. Ich arbeitete für den Code viel mit ChatGPT. Oft definierte ich stark vorher was ich gerne hätte und dann hat ChatGPT mir einen genauen Code rausgegeben der auch sehr oft sehr gut funktionierte. Falls er nicht funktionierte schrieb ich sehr genau was nicht exakt funktionierte und fragte nach einer Lösung. So konnte ich sehr effizient und ohne hohe Fehlerquote arbeiten. Beispiel einer meiner Fragen an ChatGPT: gib mir ein css link um, mein cursor in ein foto umzuwandeln. Dies funktionierte nicht worauf ich folgendes schrieb: funktioniert nicht an was könnte das liegen. ChatGPT gab mir darauf mehrere Auswahlen an möglichen Fehlern, wodurch ich auf den effektiven Fehler kam. Danach fomrulierte ich meine Frage so:schreibe mir javascript code für ein bild als cursor Darauf schickte mir ChatGPT einen Code der super funktionierte. Mit der Zeit wusste ich wie ich exakt und mit anderen Möglichkeiten ausschliessend Fragen an ChatGPT stellen konnte um einen guten funktionierenden Code zu erhalten. Diese mussten je nach dem noch ein bisschen angepasst werden jedoch sparte ich mir viel Zeit mit dem erhalt der Grundsteine von ChatGPT.
-
-
-
-
-
-
-
-
-
-
-
