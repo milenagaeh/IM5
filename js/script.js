@@ -22,6 +22,17 @@ function submitForm() {
   }, 1000);
 }
 
+function zeigeBenachrichtigung(text) {
+  const notification = document.createElement('div');
+  notification.className = 'notification';
+  notification.textContent = text;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+  }, 3000); // Die Benachrichtigung wird nach 3 Sekunden automatisch entfernt
+}
+
 
 //Secret Dungeon Rätsel//
 
